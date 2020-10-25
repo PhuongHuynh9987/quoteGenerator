@@ -23,7 +23,7 @@ function complete () {
 async function getQuote() {
     loading();
     //we need to use a proxy URL to make our API call in order to.....
-    const proxyUrl = 'https://hidden-chamber-55499.herokuapp.com/';
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const apiURL = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
     try {
         const response = await fetch(proxyUrl + apiURL);
