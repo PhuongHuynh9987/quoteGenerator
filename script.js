@@ -12,7 +12,7 @@ function loading() {
 }
 
 //hide loading
-function complete () {
+function complete() {
     if(loader.hidden === false) {
         quoteContainer.hidden = false;
         loader.hidden = true;
