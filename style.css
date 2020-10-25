@@ -1,0 +1,114 @@
+html {
+    box-sizing: border-box; /*about padding */
+}
+
+body {
+    margin: 0; /*normally theres a 10px margin around the body */
+    min-height: 100vh; /*vh is viewport height, 100vh is the full height of the window */
+    background-image: url('books.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1050px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-container {
+    width: auto;
+    max-width: 900px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .4);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, .7); /*horizontal offset , vertical offset, blur, radius*/
+}
+
+h1 {
+    font-family: fantasy;
+    font-size: 4rem;
+    font-weight: 900;
+}
+ .quote-text {
+    font-size: 2.50rem ; /*REM helps with responsive design. Relative size compared to root elements which are HTML elements 1rem = 16px */
+ }
+
+.long-quote {
+    font-size: 2rem;
+} /* --> can dynamically turn on with JS*/
+
+.fa-quote-left, .fa-quote-right {
+    font-size: 4rem;
+}
+
+.quote-author {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.button-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    outline: none;
+    background: #333333;
+    padding: 0.5rem 1.8rem;
+    box-shadow: 0 0.3rem rgba(121, 121, 121, .65);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: translate(0, .3rem); /*verticle, horizontal*/
+    box-shadow: 0 0.1rem rgba(255, 255, 255, .2);
+}
+
+.twitter-button:hover {
+    color: #38a1f3;
+}
+
+.fa-twiiter {
+    font-size: 1.5rem;
+}
+
+/* loader */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #333333;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+
+ /* Media Query: Tablet or smaller */
+@media screen and (max-width: 900px) {
+    .quote-container {
+        margin: auto 10px; 
+    }
+    .quote-text {
+        font-size: 2rem;
+    }
+}
+
+@keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
