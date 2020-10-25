@@ -29,11 +29,11 @@ async function getQuote() {
         const response = await fetch(proxyUrl + apiURL);
         const data = await response.json();
         
-        if(data.quoteAuthor === '') {
+        if(data.authorText === '') {
             authorText.innerText = 'Unknown'
         }
         else {
-            authorText.innerText = data.quoteAuthor;
+            authorText.innerText = data.authorText;
         }
         
         // reduce font size for long quote
