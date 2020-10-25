@@ -30,7 +30,7 @@ async function getQuote() {
         const data = await response.json();
         
         if(data.authorText === '') {
-            authorText.innerText = 'Unknown'
+            authorText.innerText = 'Unknown';
         }
         else {
             authorText.innerText = data.authorText;
@@ -38,7 +38,7 @@ async function getQuote() {
         
         // reduce font size for long quote
         if (data.quoteText.length > 50) {
-            quoteText.classList.add('long-quote')
+            quoteText.classList.add('long-quote');
         }
         else {
             quoteText.classList.remove('long-quote');
